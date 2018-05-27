@@ -77,4 +77,13 @@ $(document).ready(function(){
     $("#round-score-P2").text(player2.roundScore);
 
   })
+  $("button#p1-hold").click(function(event){
+    player1.hold();
+    $("#total-score-P1").text(player1.totalScore);
+
+  })
+  $("button#p2-hold").click(function(event){
+    player2.hold();
+      $("#total-score-P2").text(player2.totalScore);
+  })
 });
