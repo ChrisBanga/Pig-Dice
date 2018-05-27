@@ -29,7 +29,11 @@ class Player{
       this.roundScore = 0;
       alert("Pass!")
     }
-
+    this.getWinner = function(){
+      if(this.totalScore >= 100){
+        alert(this.playerName + "is the winner!!!")
+      }
+    }
   }
 
 }
@@ -92,6 +96,7 @@ $(document).ready(function(){
     //When plyer "passes" erase all scores expect total
     $("#roll-P1").empty();
     $("#round-score-P1").empty();
+    player1.getWinner();
 
   })
   $("button#p2-hold").click(function(event){
@@ -99,5 +104,6 @@ $(document).ready(function(){
     $("#total-score-P2").text(player2.totalScore);
     $("#roll-P2").empty();
     $("#round-score-P2").empty();
+    player2.getWinner();
   })
 });
