@@ -89,10 +89,15 @@ $(document).ready(function(){
   $("button#p1-hold").click(function(event){
     player1.hold();
     $("#total-score-P1").text(player1.totalScore);
+    //When plyer "passes" erase all scores expect total
+    $("#roll-P1").empty();
+    $("#round-score-P1").empty();
 
   })
   $("button#p2-hold").click(function(event){
     player2.hold();
-      $("#total-score-P2").text(player2.totalScore);
+    $("#total-score-P2").text(player2.totalScore);
+    $("#roll-P2").empty();
+    $("#round-score-P2").empty();
   })
 });
