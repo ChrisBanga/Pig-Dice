@@ -24,7 +24,29 @@
           </div>
         </form>
       </div>
-      <button id="start" class="col-12 btn btn-success text-align-center"> Let's PLAY!</button> 
+      <button id="start" class="col-12 btn btn-success text-align-center"> Let's PLAY!</button>
+    </div>
+    <div class="container-fluid game">
+      <button id="new-game" class="btn btn-info">NEW GAME</button>
+      <div class="row">
+        <div class="col-md-6 p1">
+          <h1>P1<span id="player1Name"></span></h1>
+          <button id="p1-roll" class="btn btn-warning">ROLL dice</button>
+          <button id="p1-hold" class="btn btn-warning">HOLD</button>
+          <h4>Dice roll:<span id="roll-P1"></span></h4>
+          <h4>Round Score:<span id="round-score-P1"></span></h4>
+          <h4>Total Score:<span id="total-score-P1"></span></h4>
+        </div>
+        <div class="col-md-6 p2">
+          <h1>P2<span id="playerName2"></span></h1>
+          <button id="p2-roll"class="btn btn-warning">ROLL dice</button>
+          <button id="p2-hold" class="btn btn-warning">HOLD</button>
+          <h4>Dice roll:<span id="roll-P2"></span></h4>
+          <h4>Round Score:<span id="round-score-P2"></span></h4>
+          <h4>Total Score:<span id="total-score-P2"></span></h4>
+
+        </div>
+      </div>
     </div>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
