@@ -1,5 +1,8 @@
 var player1= "";
 var player2= "";
+var rollTheDice= function (){
+  return Math.floor(Math.random() * 6) + 1;
+}
 
 //Business logic
 class Player{
@@ -7,7 +10,7 @@ class Player{
     this.roll = 0;
     this.roundScore = 0;
     this.totalScore= 0;
-    this.turn = turn;
+    //this.turn = turn;
     this.playerName;
     //there are 2 possible outcomes roll= 1 and this round is over
     //or roll !=1 and the player keeps playing
@@ -17,7 +20,7 @@ class Player{
         alert("1!"+this.playerName+ ", your turn is over!")
       }
       else {
-          this.roundscore += this.roll;
+          this.roundScore += this.roll;
         }
     }
     //what happens if player decides to skip his turn
@@ -58,6 +61,20 @@ $(document).ready(function(){
       }
     emptyNames();
     $(".landing-page").show();
+
+  })
+  $("button#p1-roll").click(function(event){
+    player1.roll = rollTheDice();
+    $("#roll-P1").text(player1.roll);
+    player1.play();
+    $("#round-score-P1").text(player1.roundScore);
+
+  })
+  $("button#p2-roll").click(function(event){
+    player2.roll = rollTheDice();
+    $("#roll-P2").text(player2.roll);
+    player2.play();
+    $("#round-score-P2").text(player2.roundScore);
 
   })
 });
