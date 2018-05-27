@@ -10,18 +10,23 @@
   <body>
     <div class="container-fluid">
       <h1 class="text-center title"><span class="border rounded">PIG DICE</span></h1>
-      <div class="layout">
-        <form>
+      <div class="landing-page">
+        <form id="player1">
           <div class="form-control">
             <label for="exampleInputName">Player 1</label>
-            <input type="name" class="form-group" id="player1" placeholder="Choose a name">
-            <label for="exampleInputName" class="float-right">Player 2</label>
-            <input type="name" class="form-group float-right" id="player2" placeholder="Choose a name">
+            <input type="text"  id="player1" placeholder="Choose a name" required>
+          </div>
+        </form>
+        <form id="Player2">
+          <div class="form-control">
+            <label for="exampleInputName">Player 2</label>
+            <input type="type"  id="player2" placeholder="Choose a name" required>
           </div>
         </form>
       </div>
+      <button id="start" class="col-12 btn btn-success text-align-center"> Let's PLAY!</button> 
     </div>
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/bootstrap.js"></script>
   </body>
 </html>
