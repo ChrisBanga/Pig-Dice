@@ -60,7 +60,16 @@ $(document).ready(function(){
       $("#playerTwo").val("");
       }
     emptyNames();
+    //erase all scores once New game is started
+    $("#roll-P1").empty();
+    $("#round-score-P1").empty();
+    $("total-score-P1").empty();
+    $("#roll-P2").empty();
+    $("#round-score-P2").empty();
+    $("total-score-P2").empty();
+
     $(".landing-page").show();
+
 
   })
   $("button#p1-roll").click(function(event){
