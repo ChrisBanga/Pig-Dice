@@ -1,6 +1,8 @@
 var player1= "";
 var player2= "";
+
 var rollTheDice= function (){
+  //Math formula to get random number between 1-6
   return Math.floor(Math.random() * 6) + 1;
 }
 
@@ -21,6 +23,8 @@ class Player{
       }
       else {
           this.roundScore += this.roll;
+          this.totalScore += this.roundScore;
+
         }
     }
     //what happens if player decides to skip his turn
@@ -81,6 +85,9 @@ $(document).ready(function(){
     $("#roll-P1").text(player1.roll);
     player1.play();
     $("#round-score-P1").text(player1.roundScore);
+    $("#total-score-P1").text(player1.totalScore);
+    player1.getWinner();
+
 
   })
   $("button#p2-roll").click(function(event){
@@ -88,6 +95,8 @@ $(document).ready(function(){
     $("#roll-P2").text(player2.roll);
     player2.play();
     $("#round-score-P2").text(player2.roundScore);
+    $("#total-score-P2").text(player2.totalScore);
+    player2.getWinner();
 
   })
   $("button#p1-hold").click(function(event){
